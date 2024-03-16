@@ -36,7 +36,7 @@ const Projects = () => {
                     <Image
                     alt="Card background"
                     className="object-cover rounded-xl drop-shadow-lg"
-                    src="https://via.placeholder.com/1920x1080"
+                    src="https://via.placeholder.com/1920x970"
                     width={300}
                     />
                     <a href="" className='md:text-md text-sm pt-4 m-auto font-semibold text-[#006FEE]'>View on Github <i className="fa-brands fa-github" /></a>
