@@ -3,7 +3,7 @@ import {motion} from 'framer-motion'
 import {Image} from '@nextui-org/react'
 import {Card, CardHeader, CardBody, Button, Input} from "@nextui-org/react";
 import emailjs from '@emailjs/browser';
-import {useRef, useState} from 'react'
+import {useRef, useState, useEffect} from 'react'
 
 
 const Contact = () => {
@@ -14,8 +14,10 @@ const Contact = () => {
         const form = useRef();
 
         const [messageSent, setMessageSent] = useState(false);
-        const [emailValue, setEmailValue] = useState("");
-        const [messageValue, setMessageValue] = useState("");
+        const [emailValue, setEmailValue] = useState('');
+        const [messageValue, setMessageValue] = useState('');
+
+        const [isValid, setIsValid] = useState(false);
 
         const handleEmailChange = (e) => {
           setEmailValue(e.target.value);
@@ -23,6 +25,10 @@ const Contact = () => {
         const handleMessageChange = (e) => {
           setMessageValue(e.target.value);
         }
+
+        useEffect(() => {
+          setIsValid(emailValue !== '' && messageValue !== '');
+        }, [emailValue, messageValue]);
 
         const handleButton = () => {
           setMessageSent(true)
@@ -37,7 +43,7 @@ const Contact = () => {
         const sendEmail = (e) => {
           e.preventDefault();
 
-          if (emailValue !== '' && messageValue !== ''){
+          if (isValid){
       
           emailjs
             .sendForm('service_kplsa7a', 'template_vupegj4', form.current, {
