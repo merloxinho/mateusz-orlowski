@@ -29,17 +29,17 @@ const Projects = () => {
             </Card>
             <Card className="py-4">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                    <small className="text-default-500">React, Tailwind</small>
-                    <h4 className="font-bold text-large">Next project soon</h4>
+                    <small className="text-default-500">React, Tailwind, Firebase, Framer Motion</small>
+                    <h4 className="font-bold text-large">Quickshare</h4>
                 </CardHeader>
                 <CardBody className="overflow-visible py-2">
                     <Image
                     alt="Card background"
                     className="object-cover rounded-xl drop-shadow-lg"
-                    src="https://via.placeholder.com/1920x970"
+                    src="https://imgur.com/IYPKNbC.png"
                     width={300}
                     />
-                    <a href="" className='md:text-md text-sm pt-4 m-auto font-semibold text-[#006FEE]'>View on Github <i className="fa-brands fa-github" /></a>
+                    <a href="https://quickshare-roan.vercel.app" className='md:text-md text-sm pt-4 m-auto font-semibold text-[#006FEE]'>View on Github <i className="fa-brands fa-github" /></a>
                 </CardBody>
             </Card>
         </motion.div>
