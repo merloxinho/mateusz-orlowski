@@ -25,6 +25,7 @@ const Contact = () => {
         }
 
         const handleButton = () => {
+          setMessageSent(true)
           setTimeout(() => {
             setMessageSent(false);
             setMessageValue('');
@@ -45,7 +46,6 @@ const Contact = () => {
             .then(
               () => {
                 console.log('SUCCESS!');
-                setMessageSent(true);
               },
               (error) => {
                 console.log('FAILED...', error.text);
