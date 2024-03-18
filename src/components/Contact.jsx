@@ -29,29 +29,6 @@ const Contact = () => {
         useEffect(() => {
           setIsValid(emailValue !== '' && messageValue !== '');
         }, [emailValue, messageValue]);
-
-        const handleButton = () => {
-          setMessageSent(true)
-          setTimeout(() => {
-            setMessageSent(false);
-            setMessageValue('');
-            setEmailValue('');
-            
-          }, 3000);
-        }
-      
-        const sendEmail = async (e) => {
-          e.preventDefault();
-        
-          try {
-            await emailjs.sendForm('service_kplsa7a', 'template_vupegj4', form.current, {
-              publicKey: 'CHQrDXnWMdnF5oc2s',
-            });
-            console.log('SUCCESS!');
-          } catch (error) {
-            console.error('FAILED...', error);
-          }
-        };
   return (
     <section className='flex w-full p-12 md:p-0 md:h-screen bg-gray-100 select-none'>
     <div
