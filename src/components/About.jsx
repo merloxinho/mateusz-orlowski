@@ -32,7 +32,7 @@ const About = () => {
               <Progress size="lg" aria-label="Loading..." value={70} />
             </div>
             <div>
-              <motion.p className='font-semibold text-zinc-600 m-0'>Framer Motion, NextUi</motion.p>
+              <motion.p className='font-semibold text-zinc-600 m-0'>Framer Motion</motion.p>
               <p className='font-light text-zinc-400 m-0 text-left'>3/10</p>
               <Progress size="lg" aria-label="Loading..." value={30} />
             </div>
